@@ -12,6 +12,6 @@ app.listen(3000, async () => {
   console.log("Connected");
 
   let ser = new service();
-  await ser.createTweet({content:"This is my #tweet afetr #refacroring"});
+  await ser.createTweet({content:"This is my #TWEET"});
 
 });
