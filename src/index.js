@@ -1,10 +1,13 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
-const connect = require('./config/database');
+const connect = require("./config/database");
 
-app.listen(3000, async ()=> {
-    console.log('Server started');
-    await connect();
-    console.log("Connected");
-})
+const TweetService = require("./services/tweet-service");
+
+app.listen(3000, async () => {
+  console.log("Server started");
+  await connect();
+  console.log("Connected");
+
+});

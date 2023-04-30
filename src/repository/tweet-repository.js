@@ -1,4 +1,3 @@
-const e = require('express');
 const Tweet = require('../models/tweet');
 
 class TweetRepository{
