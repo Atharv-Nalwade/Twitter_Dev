@@ -1,13 +1,17 @@
-const express = require("express");
+import express from "express";
 const app = express();
 
-const connect = require("./config/database");
+import { connect } from './config/database.js'
 
-const TweetService = require("./services/tweet-service");
+import service from './services/tweet-service.js'
+
 
 app.listen(3000, async () => {
   console.log("Server started");
   await connect();
   console.log("Connected");
+
+  let ser = new service();
+  await ser.createTweet({content:"This is my #tweet afetr #refacroring"});
 
 });
